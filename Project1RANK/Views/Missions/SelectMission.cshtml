@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Project1RANK.Models.Mission>
+
+@{
+    ViewBag.Title = "SelectMission";
+}
+
+<h2>Get to Know Your Mission</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mission_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mission_President_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mission_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mission_Language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mission_Climate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mission_Religion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mission_Flag)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mission_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mission_President_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mission_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mission_Language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mission_Climate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mission_Religion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mission_Flag)
+        </td>
+        <td>
+            @Html.ActionLink("Mission Page", "MissionInfo", new { id=item.Mission_ID }) 
+        </td>
+    </tr>
+}
+
+</table>
