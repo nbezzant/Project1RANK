@@ -28,5 +28,10 @@ namespace Project1RANK.Controllers
             return View();
         }
 
+        public ActionResult GetSaved()
+        {
+            return Redirect("https://www.churchofjesuschrist.org/?lang=eng");
+        }
+
     }
 }

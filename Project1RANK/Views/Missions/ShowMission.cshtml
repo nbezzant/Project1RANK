@@ -100,6 +100,6 @@
         </div>
     </div>
     <p>
-        @Html.ActionLink("Home", "../Home/Index")
+        <input type="button" class="btn btn-info btn-lg" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
     </p>
 }
