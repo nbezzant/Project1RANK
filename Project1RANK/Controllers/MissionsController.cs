@@ -19,7 +19,7 @@ namespace Project1RANK.Controllers
                             Mission_Language = "Mandarin Chinese",
                             Mission_Climate = "Hot and Humid",
                             Mission_Religion = "Buddhist and Daoist",
-                            Mission_Flag = "C:/Users/natha/source/repos/Project1RANK/Project1RANK/Content/Images/taiwan.png"
+                            Mission_Flag = "taiwan.png"
                                     },
 
             new Mission{ Mission_ID = 2,
@@ -29,7 +29,7 @@ namespace Project1RANK.Controllers
                             Mission_Language = "Polish",
                             Mission_Climate = "Temperate",
                             Mission_Religion = "Catholic",
-                            Mission_Flag = "C:/Users/natha/source/repos/Project1RANK/Project1RANK/Content/Images/poland.png"
+                            Mission_Flag = "poland.png"
                                     },
 
             new Mission{ Mission_ID = 3,
