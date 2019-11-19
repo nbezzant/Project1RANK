@@ -1,18 +1,22 @@
-﻿@model Project1RANK.Models.EmailFormModel 
+﻿@model Project1RANK.Models.EmailFormModel
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Contact</h2>
+<br />
 
 @Html.Raw(ViewBag.Support)
-
+<h5><b>Phone Number:</b> (555)555-5555</h5>
+<h5><b>Email:</b> rankis403@gmail.com</h5>
+<br />
+<br />
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <h4>Send your comments.</h4>
+    <h4>Send your comments below.</h4>
     <hr />
     <div class="form-group">
         @Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label" })
@@ -44,8 +48,9 @@
         </div>
     </div>
 }
+    <p>
+        <input type="button" class="btn btn-info btn-lg" value="View a Mission" onclick="location.href='@Url.Action("ChooseMission", "Missions")'" />   |
+        <input type="button" class="btn btn-info btn-lg" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
+    </p>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
 
