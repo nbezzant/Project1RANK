@@ -2,11 +2,14 @@
 @{
     ViewBag.Title = "About";
 }
-
-<fieldset style="background-color: rgb(145, 145, 145); -webkit-border-radius: 8px;
+<div>
+    <br />
+</div>
+<fieldset style="background-color: #eee; -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px; padding-left: 10%; padding-right: 10%;">
     <u><h2 style="text-align: center">About Mission Central</h2></u>
+    <br />
     <p style="text-align: center">
         Mission Central was founded in 2003 by Ryan Gosling. Although he left the church to pursue a career in
         acting,
@@ -24,6 +27,7 @@
         them that
         long!
     </p>
+    <br />
     <center>
         <p>
             <input type="button" class="btn btn-info btn-lg" value="Choose Another Mission" onclick="location.href='@Url.Action("ChooseMission", "Missions")'" />
