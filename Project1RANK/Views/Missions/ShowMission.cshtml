@@ -68,17 +68,10 @@
     <br />
     </dl>
 </div>
-<p>
-    <input type="button" class="btn btn-info btn-lg" value="Choose Another Mission" onclick="location.href='@Url.Action("ChooseMission", "Missions")'" />   |   
-    <input type="button" class="btn btn-info btn-lg" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
-</p>
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
 <div>
+    <hr />
     <h1>Frequently Asked Questions for missionaries in this mission:</h1>
+    <hr />
     <dt>
         @Html.DisplayNameFor(model => model.Mission_FAQ_1)
     </dt>
@@ -104,12 +97,17 @@
         @Html.DisplayFor(model => model.Mission_FAQ_2_Answer)
     </dd>
 </div>
-<div class="form-horizontal">
-    <hr />
-    <hr />
-    <h2>Leave a question below:</h2>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        <h2>Leave a question below:</h2>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="form-group">
             <!-- @Html.LabelFor(model => model.Mission_Name, htmlAttributes: new { @class = "control-label col-md-2" })-->
@@ -125,7 +123,10 @@
             </div>
         </div>
     </div>
-    <p>
-        <input type="button" class="btn btn-info btn-lg" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
-    </p>
+    <center>
+        <p>
+            <input type="button" class="btn btn-info btn-lg" value="Choose Another Mission" onclick="location.href='@Url.Action("ChooseMission", "Missions")'" />   |
+            <input type="button" class="btn btn-info btn-lg" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
+        </p>
+    </center>
 }
