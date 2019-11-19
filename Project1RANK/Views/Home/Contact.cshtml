@@ -12,45 +12,50 @@
 <h5><b>Email:</b> rankis403@gmail.com</h5>
 <br />
 <br />
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <h4>Send your comments below.</h4>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.FromName)
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.FromEmail)
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Message)
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Send" />
+            </div>
+        </div>
+    }
+</div>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <h4>Send your comments below.</h4>
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.FromName)
-        </div>
-    </div>
-    <br />
-    <div class="form-group">
-        @Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.FromEmail)
-        </div>
-    </div>
-    <br />
-    <div class="form-group">
-        @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Message)
-        </div>
-    </div>
-    <br />
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Send" />
-        </div>
-    </div>
-}
+<br />
+<br />
+<div>
     <p>
         <input type="button" class="btn btn-info btn-lg" value="View a Mission" onclick="location.href='@Url.Action("ChooseMission", "Missions")'" />           
         <input type="button" class="btn btn-info btn-lg" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
     </p>
-
+</div>
 
