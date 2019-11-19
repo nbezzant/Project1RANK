@@ -39,7 +39,7 @@ namespace Project1RANK.Controllers
                             Mission_Language = "Portuguese",
                             Mission_Climate = "Hot and Humid",
                             Mission_Religion = "Evangelical Christian",
-                            Mission_Flag = "C:/Users/natha/source/repos/Project1RANK/Project1RANK/Content/Images/brazil.png"
+                            Mission_Flag = "brazil.png"
                                     },
 
                         new Mission{ Mission_ID = 4,
@@ -49,7 +49,7 @@ namespace Project1RANK.Controllers
                             Mission_Language = "Portuguese",
                             Mission_Climate = "Dry Heat",
                             Mission_Religion = "Catholic",
-                            Mission_Flag = "https://en.wikipedia.org/wiki/Flag_of_Brazil#/media/File:Flag_of_Brazil.svg"
+                            Mission_Flag = "brazil.png"
                                     }
         };
 
