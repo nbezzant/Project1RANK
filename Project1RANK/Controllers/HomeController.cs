@@ -16,7 +16,6 @@ namespace Project1RANK.Controllers
             return View();
         }
 
-
         public ActionResult About()
         {
             return View();

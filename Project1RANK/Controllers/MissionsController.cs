@@ -23,7 +23,7 @@ namespace Project1RANK.Controllers
                             Mission_FAQ_1 = "Question: What was the hardest part of adopting Taiwan's culture for you?",
                             Mission_FAQ_1_Answer= "Answer: Memorizing the language and communicating with the natives was a big struggle at the beginning.",
                             Mission_FAQ_2 = "Question: What did you most wish you did to prepare for your mission?",
-                            Mission_FAQ_2_Answer= "Answer: I wish i was more exposed to people who are not members of The Church of Jesus Christ of Latter Day Saints, by maybe working wit the missionaries more."
+                            Mission_FAQ_2_Answer= "Answer: I wish I was more exposed to people who are not members of The Church of Jesus Christ of Latter Day Saints, by maybe working with the missionaries more."
 
             },
 
@@ -68,7 +68,7 @@ namespace Project1RANK.Controllers
                             Mission_Religion = "Catholic",
                             Mission_Flag = "brazil.png",
                             Mission_FAQ_1 = "Question: What was the hardest part of adopting Brazil's culture for you?",
-                            Mission_FAQ_1_Answer= "Answer: How outgoing and open the poeple were, and how open they wanted you to be.",
+                            Mission_FAQ_1_Answer= "Answer: How outgoing and open the people were, and how open they wanted you to be.",
                             Mission_FAQ_2 = "Question: What did you most wish you did to prepare for your mission?",
                             Mission_FAQ_2_Answer= "Answer: I wish I had more exposure to the doctrine the missionaries teach."
 
