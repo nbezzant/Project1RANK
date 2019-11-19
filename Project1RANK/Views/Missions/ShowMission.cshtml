@@ -76,7 +76,33 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
+<div>
+    <h1>Frequently Asked Questions for missionaries in this mission:</h1>
+    <dt>
+        @Html.DisplayNameFor(model => model.Mission_FAQ_1)
+    </dt>
+    <br />
+    <dd>
+        @Html.DisplayFor(model => model.Mission_FAQ_1)
+    </dd>
+    <br />
+    <dd>
+        @Html.DisplayFor(model => model.Mission_FAQ_1_Answer)
+    </dd>
+    <br />
+    <br />
+    <dt>
+        @Html.DisplayNameFor(model => model.Mission_FAQ_2)
+    </dt>
+    <br />
+    <dd>
+        @Html.DisplayFor(model => model.Mission_FAQ_2)
+    </dd>
+    <br />
+    <dd>
+        @Html.DisplayFor(model => model.Mission_FAQ_2_Answer)
+    </dd>
+</div>
 <div class="form-horizontal">
     <hr />
     <hr />

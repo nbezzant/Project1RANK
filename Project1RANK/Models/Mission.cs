@@ -43,6 +43,14 @@ namespace Project1RANK.Models
         [Required]
         public string Mission_Flag { get; set; }
 
+        [Display(Name ="FAQ #1:")]
+        public string Mission_FAQ_1 { get; set; }
 
+        public string Mission_FAQ_1_Answer { get; set; }
+
+        [Display(Name = "FAQ #2:")]
+        public string Mission_FAQ_2 { get; set; }
+
+        public string Mission_FAQ_2_Answer { get; set; }
     }
 }
