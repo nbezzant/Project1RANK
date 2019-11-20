@@ -58,6 +58,9 @@ namespace Project1RANK.Models
         public string aComment { get; set; }
 
         public string aName { get; set; }
+        public List<RealTimeCommenting> my2Comments { get; set; }
+        public string bComment { get; set; }
 
+        public string bName { get; set; }
     }
 }
