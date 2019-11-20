@@ -29,8 +29,8 @@ namespace Project1RANK.Controllers
         public ActionResult Contact()
         {
             lstSubject.Add("Question");
-            lstSubject.Add("Test1");
-            lstSubject.Add("Test2");
+            lstSubject.Add("Urgent");
+            lstSubject.Add("Bug Report");
             ViewBag.Subjects = lstSubject;
             return View();
         }
