@@ -3,19 +3,34 @@
     ViewBag.Title = "About";
 }
 
-<h2>About Mission Central</h2>
+<fieldset style="background-color: #eee; -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px; padding-left: 10%; padding-right: 10%; margin-top: 30px">
+    <u><h2 style="text-align: center">About Mission Central</h2></u>
+    <br />
+    <p style="text-align: center">
+        Mission Central was founded in 2003 by Ryan Gosling. Although he left the church to pursue a career in
+        acting,
+        which you may have seen him in movies like "The Notebook." He loved missionaries and wanted to help them
+        succeed.
+        That is why he created Mission Central. Since 2003, we have made lots of progress and helped over 200,000
+        missionaries
+        thus far. Including President Nelson's granddaughter's cousin's bestfriend! Our aim and goals has always
+        been
+        the same,
+        "help missionaries succeed and preach the gospel, without breaking most of the rules in the missionary
+        handbook." We are
+        a family centered group as we believe that families can be together forever. Even if you don't want to be
+        with
+        them that
+        long!
+    </p>
+    <br />
+    <center>
+        <p>
+            <input type="button" class="btn btn-info btn-lg" value="View a Mission" onclick="location.href='@Url.Action("ChooseMission", "Missions")'" />
+            <input type="button" class="btn btn-info btn-lg" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
+        </p>
+    </center>
+</fieldset>
 
-<p>
-    Mission Central was founded in 2003 by Ryan Gosling. Although he left the church to pursue a career in acting,
-    which you may have seen him in movies like "The Notebook." He loved missionaries and wanted to help them succeed.
-    That is why he created Mission Central. Since 2003, we have made lots of progress and helped over 200,000 missionaries
-    thus far. Including President Nelson's granddaughter's cousin's bestfriend! Our aim and goals has always been the same,
-    "help missionaries succeed and preach the gospel, without breaking most of the rules in the missionary handbook." We are
-    a family centered group as we believe that families can be together forever. Even if you don't want to be with them that
-    long!
-</p>
-
-<p>
-    <input type="button" class="btn btn-info btn-lg" value="View a Mission" onclick="location.href='@Url.Action("ChooseMission", "Missions")'" />       
-    <input type="button" class="btn btn-info btn-lg" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
-</p>
