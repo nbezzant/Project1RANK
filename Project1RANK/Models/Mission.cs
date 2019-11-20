@@ -52,5 +52,12 @@ namespace Project1RANK.Models
         public string Mission_FAQ_2 { get; set; }
 
         public string Mission_FAQ_2_Answer { get; set; }
+
+        public List<RealTimeCommenting> myComments { get; set; }
+
+        public string aComment { get; set; }
+
+        public string aName { get; set; }
+
     }
 }
