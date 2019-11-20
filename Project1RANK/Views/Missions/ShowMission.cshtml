@@ -121,17 +121,17 @@
 
     @foreach (var New_Reply in Model.myComments)
     {
-        <hr />
+        <!--<hr />-->
         <b>
             @Html.DisplayNameFor(modelItem => New_Reply.Name)
         </b>
-            @Html.DisplayFor(modelItem => New_Reply.Name)
+        @Html.DisplayFor(modelItem => New_Reply.Name)
         <br />
         <b>
             @Html.DisplayNameFor(modelItem => New_Reply.Body)
         </b>
-            @Html.DisplayFor(modelItem => New_Reply.Body)
-        <hr />
+        @Html.DisplayFor(modelItem => New_Reply.Body)
+        <!--<hr />-->
     }
 
 </div>
