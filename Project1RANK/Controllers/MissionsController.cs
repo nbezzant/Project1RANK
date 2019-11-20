@@ -24,7 +24,8 @@ namespace Project1RANK.Controllers
                             Mission_FAQ_1_Answer= "Answer: Memorizing the language and communicating with the natives was a big struggle at the beginning.",
                             Mission_FAQ_2 = "Question: What did you most wish you did to prepare for your mission?",
                             Mission_FAQ_2_Answer= "Answer: I wish i was more exposed to people who are not members of The Church of Jesus Christ of Latter Day Saints, by maybe working wit the missionaries more.",
-                            myComments = new List<RealTimeCommenting>()
+                            myComments = new List<RealTimeCommenting>(),
+                            my2Comments= new List<RealTimeCommenting>()
 
     },
 
@@ -40,7 +41,8 @@ namespace Project1RANK.Controllers
                             Mission_FAQ_1_Answer= "Answer: Every one in Poland was really reserved, so it was hard to talk to people.",
                             Mission_FAQ_2 = "Question: What did you most wish you did to prepare for your mission?",
                             Mission_FAQ_2_Answer= "Answer: I wish I had been more comfortable talking to strangers.",
-                            myComments = new List<RealTimeCommenting>()
+                            myComments = new List<RealTimeCommenting>(),
+                            my2Comments= new List<RealTimeCommenting>()
 
     },
 
@@ -56,7 +58,8 @@ namespace Project1RANK.Controllers
                             Mission_FAQ_1_Answer= "Answer: Eating rice and Beans every day was a real struggle.",
                             Mission_FAQ_2 = "Question: What did you most wish you did to prepare for your mission?",
                             Mission_FAQ_2_Answer= "Answer: I wish I had read more of the scriptures, and become more familiar with them.",
-                            myComments = new List<RealTimeCommenting>()
+                            myComments = new List<RealTimeCommenting>(),
+                            my2Comments= new List<RealTimeCommenting>()
 
 
     },
@@ -74,7 +77,8 @@ namespace Project1RANK.Controllers
                             Mission_FAQ_1_Answer= "Answer: How outgoing and open the people were, and how open they wanted you to be.",
                             Mission_FAQ_2 = "Question: What did you most wish you did to prepare for your mission?",
                             Mission_FAQ_2_Answer= "Answer: I wish I had more exposure to the doctrine the missionaries teach.",
-                            myComments = new List<RealTimeCommenting>()
+                            myComments = new List<RealTimeCommenting>(),
+                            my2Comments= new List<RealTimeCommenting>()
 
     }
 };
@@ -104,20 +108,20 @@ namespace Project1RANK.Controllers
         public ActionResult ShowMission(Mission mission,RealTimeCommenting comment)
         {
             var oMission = lstMissions.Find(id => id.Mission_ID == mission.Mission_ID);
-
-            var oComment = mission.aComment;
             var oName = mission.aName;
             RealTimeCommenting tempVar = new RealTimeCommenting();
-            tempVar.Name = oName;
-            tempVar.Body = oComment;
-            if (tempVar is null)
+            var oComment = mission.aComment;
+            if (oComment == null)
             {
-                return View(oMission);
+                tempVar.Name = mission.bName;
+                tempVar.Body = mission.bComment;
+                oMission.my2Comments.Add(tempVar);
             }
-            else {
-                
-                    oMission.myComments.Add(tempVar);
-                
+            else
+            {
+                tempVar.Name = oName;
+                tempVar.Body = oComment;
+                oMission.myComments.Add(tempVar);
             }
                 return View(oMission);
         }
