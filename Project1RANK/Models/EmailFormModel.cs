@@ -13,6 +13,8 @@ namespace Project1RANK.Models
         public string FromName { get; set; }
         [Required, Display(Name = "Your email"), EmailAddress]
         public string FromEmail { get; set; }
+        [Required, Display(Name = "Subject")]
+        public string Subject { get; set; }
         [Required]
         public string Message { get; set; }
     }

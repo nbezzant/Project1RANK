@@ -10,6 +10,10 @@ namespace Project1RANK.Controllers
 {
     public class HomeController : Controller
     {
+        public static List<string> lstSubject = new List<string>();
+        
+        
+        
         // GET: Home
         public ActionResult Index()
         {
@@ -24,6 +28,10 @@ namespace Project1RANK.Controllers
 
         public ActionResult Contact()
         {
+            lstSubject.Add("Question");
+            lstSubject.Add("Test1");
+            lstSubject.Add("Test2");
+            ViewBag.Subjects = lstSubject;
             return View();
         }
 
